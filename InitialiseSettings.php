@@ -406,6 +406,29 @@ $wgConf->settings = [
 		'default' => '/home/skhsblsb/virtualenv/python/3.8/bin/pygmentize',
 	],
 		
+// Anti-spam
+	'wgAccountCreationThrottle' =>[
+		'default' => 5,
+	],
+	'wgAutoConfirmAge' => [
+		'default' => 345600, // 4 days * 24 hours * 60 minutes * 60 seconds
+	],
+	'wgAutoConfirmCount' => [
+		'default' => 10,
+	],
+	'wgSpamBlacklistFiles' => [
+		'default' => [
+			"https://meta.wikimedia.org/w/index.php?title=Spam_blacklist&action=raw&sb_ver=1",
+		],
+	],
+	'wgTitleBlacklistSources' => [
+		'default' => [
+			[
+				'type' => 'url',
+				'src' => 'https://meta.wikimedia.org/w/index.php?title=Title_blacklist&action=raw',
+			],
+		],
+	],
 	// Namespace //
 	'wgSiteNotice' => [
 		'default' => '',
